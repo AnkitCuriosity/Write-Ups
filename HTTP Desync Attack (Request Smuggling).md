@@ -225,3 +225,5 @@ Severity assigned : P1 or Critical
 Bounty assigned : $4,300
 
 ![7](https://user-images.githubusercontent.com/58471667/190247022-debd5bd2-963b-4322-b0b9-4346bb50fa50.png)
+
+*Find me on [@AnkitCuriosity](https://twitter.com/AnkitCuriosity) for more updates!*
