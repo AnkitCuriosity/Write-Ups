@@ -226,4 +226,6 @@ Bounty assigned : $4,300
 
 ![7](https://user-images.githubusercontent.com/58471667/190247022-debd5bd2-963b-4322-b0b9-4346bb50fa50.png)
 
+(**NOTE** that this finding was a result of Distil Bot protection being vulnerable to HTTP Desync attacks back in 2020. Later on the issue was fixed by the vendor itself and now any HTTP request exhibiting ambiguity is rejected.)
+
 *Find me on [@AnkitCuriosity](https://twitter.com/AnkitCuriosity) for more updates!*
