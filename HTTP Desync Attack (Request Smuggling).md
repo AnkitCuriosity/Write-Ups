@@ -118,7 +118,7 @@ Above screenshots shows one of the logged HTTP POST request of any random user c
 
 While testing the logging of requests, by making them saved at my `Legal Entity` section of `https://my.vulnerable.com/user/vendor/legal`, I observed that I was getting saved with user's request meant for many other hosts as well such as `www.******.com`, `www.*****.be`, `api.******.com` etc. All these belonged to other organizations different from the target program.
 
-Then I observed that all above hosts including `my.vulnerable.com` are pointing to the same IP of `192.225.xxx.x` which belongs to Distil Networks, a leading Bot manager (now acquired by Imperva). This simply meant that not only for `my.vulnerable.com` but we can steal/log user requests of all the applications whose back end web server lies behind the `192.225.xxx.x`. Whois reverse IP lookup said that there are `121` other websites using `192.225.xxx.x`.
+Then I observed that all above hosts including `my.vulnerable.com` are pointing to the same IP of `192.225.xxx.x` which belongs to Distil Networks, a leading Bot manager (now acquired by Imperva). This simply meant that not only for `my.vulnerable.com` but we can steal/log user requests of all the applications behind `192.225.xxx.x` utilizing the common backend. Whois reverse IP lookup said that there are `121` other websites using `192.225.xxx.x`.
 
 ![4](https://user-images.githubusercontent.com/58471667/190241570-b33c1b49-bb5e-4623-8806-a05e7f60c561.png)
 
