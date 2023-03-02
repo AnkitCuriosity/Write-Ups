@@ -1,13 +1,13 @@
 # Web Cache Poisoning - Capability to disable/deface the app.██████████.com (A tale of poisoning through the layers of caching)
 
 
-##Description -:
+## Description -:
 
 **NOTE** to respect the private policy of the program, the actual vulnerable asset is not disclosed and the same has been referenced as `app.vulnerable.com` wherever necessary.
 
 Earlier I went to `https://app.vulnerable.com` and realized that it is vulnerable to Web Cache Poisoning attack. It simply means, if I send a crafted request to the website, then it's response gets cached by the Cloudfront operating at the front end and the same is served to all the approaching legit users.
 
-##Challenges -:
+## Challenges -:
 
 I've been working around "Web Cache poisoning" issues for quite some time and have submitted tons of such issues to many organizations to help them secure their cache related disasters. On the basis of my understanding of these attacks, I can say that the problem triagers/team would face here is to determine the vulnerability within the testing scope.
 
@@ -31,7 +31,7 @@ No other request header including the `Origin` header is included in the cache k
 
 Means, within the testing scope if you only for once initiate the request with `Accept-Encoding: g` cache buster but without the unkeyed header (one that is used for actual poisoning), then you'd end up losing the opportunity because you cannot use `Accept-Encoding: x` any further as long as the cache against `Accept-Encoding: g` expires.
 
-##Reproduction Steps (For testing scenario) -:
+## Reproduction Steps (For testing scenario) -:
 
 Relying on the limited possibility through the Challenge #3, it is possible to poison the cache by initiating a request with `Accept-Encoding: g` header (along with the unkeyed header to trigger the poisoning in the form of a `HTTP/1.1 400 Bad Request` response). Once done, the victim end needs to request the asset with the `Accept-Encoding: g` header at their end too.
 
@@ -39,7 +39,7 @@ Conclusion here is that we poisoned the cache for any user with `Accept-Encoding
 
 But obviously this way of testing with "Accept-Encoding" does not looks appealing as far as targeting the real users is intended and this is the exact reason why this report was closed as `N/A` initially. Now to workaround this, the only thing you are left with is to actually poison the `https://app.vulnerable.com` (which is a "staging" environment not production) using the steps in my next section.
 
-##Reproduction Steps (For real scenario. CAUTION - this will affect the realtime staging users) -:
+## Reproduction Steps (For real scenario. CAUTION - this will affect the realtime staging users) -:
 
 1) Based on the values of `Age` and `max-age` response headers, an attacker can identify that the life of current cache is for 21600 seconds (6 hours) out of which `Age` seconds are already passed. Wait for the value of `Age` to complete the `max-age` value and instantly initiate the following -:
 
@@ -53,13 +53,13 @@ curl --header "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,ima
 
 This is how the application portal looked before poisoning -:
 
-<img src="/before.png"></img> 
+![before](https://user-images.githubusercontent.com/58471667/222510715-ea8180f7-a759-4405-84d3-ae0b815ba5ca.png)
 
 After poisoning -:
 
-<img src="/after.png"></img>
+![after](https://user-images.githubusercontent.com/58471667/222510741-04dd263e-4716-4942-8e42-dd76567ed47e.png)
 
-##References -:
+## References -:
 
 `https://portswigger.net/research/web-cache-entanglement`
 
@@ -67,3 +67,5 @@ After poisoning -:
 
 Severity assigned : P3
 Bounty assigned : $1000
+
+*Find me on [@AnkitCuriosity](https://twitter.com/AnkitCuriosity) for more updates!*
