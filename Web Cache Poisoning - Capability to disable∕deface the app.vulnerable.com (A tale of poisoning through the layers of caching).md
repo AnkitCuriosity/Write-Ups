@@ -51,11 +51,11 @@ curl --header "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,ima
 
 ## Supporting Material/Screenshots -:
 
-This is how the application portal looked before poisoning -:
+### This is how the application portal looked before poisoning -:
 
 ![before](https://user-images.githubusercontent.com/58471667/222510715-ea8180f7-a759-4405-84d3-ae0b815ba5ca.png)
 
-After poisoning -:
+### After poisoning -:
 
 ![after](https://user-images.githubusercontent.com/58471667/222510741-04dd263e-4716-4942-8e42-dd76567ed47e.png)
 
@@ -65,7 +65,9 @@ After poisoning -:
 
 **Reward** -:
 
-Severity assigned : P3
+Severity assigned : P3  
 Bounty assigned : $1000
+
+![3](https://user-images.githubusercontent.com/58471667/222513648-fd186d68-bb20-48a4-bd2c-1d5a8abb3b20.png)
 
 *Find me on [@AnkitCuriosity](https://twitter.com/AnkitCuriosity) for more updates!*
