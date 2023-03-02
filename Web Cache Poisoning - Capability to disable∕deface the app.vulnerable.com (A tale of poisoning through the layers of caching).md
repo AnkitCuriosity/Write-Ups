@@ -11,7 +11,7 @@ Earlier I went to `https://app.vulnerable.com` and realized that it is vulnerabl
 
 I've been working around "Web Cache poisoning" issues for quite some time and have submitted tons of such issues to many organizations to help them secure their cache related disasters. On the basis of my understanding of these attacks, I can say that the problem triagers/team would face here is to determine the vulnerability within the testing scope.
 
-This case is the one, where it might be difficult to determine the vulnerability with the testing scope. But on the opposite side it would be easy to implement the attack on a real scope in real time. The reason for this problem is -:
+This case is the one, where it might be difficult to determine the vulnerability within the testing scope. But on the opposite side it would be easy to implement the attack on a real scope in real time. The reason for this problem is -:
 
 ### Challenge #1
 
@@ -37,7 +37,11 @@ Relying on the limited possibility through the Challenge #3, it is possible to p
 
 Conclusion here is that we poisoned the cache for any user with `Accept-Encoding: g` header value. This small test proved that the cache server is allowed to cache even the 400 responses which is the actual vulnerability.
 
-But obviously this way of testing with "Accept-Encoding" does not looks appealing as far as targeting the real users is intended and this is the exact reason why this report was closed as `N/A` initially. Now to workaround this, the only thing you are left with is to actually poison the `https://app.vulnerable.com` (which is a "staging" environment not production) using the steps in my next section.
+But obviously this way of testing with "Accept-Encoding" didn't look appealing as far as targeting the real users was intended and this is the exact reason why this report was closed as `N/A` initially -:
+
+![4](https://user-images.githubusercontent.com/58471667/222517123-11a27dd4-6845-453a-807e-a658cb6e22b1.png)
+
+Now to workaround this, the only thing I was left with was to actually poison the `https://app.vulnerable.com` (which is a "staging" environment not production) using the steps in my next section.
 
 ## Reproduction Steps (For real scenario. CAUTION - this will affect the realtime staging users) -:
 
@@ -48,6 +52,10 @@ curl --header "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,ima
 ```
 
 2) Now any genuine user visiting at `https://app.vulnerable.com` would see the message `PoC-by-AnkitSingh` instead of the intended `HTTP/1.1 200 OK` response.
+
+After acquiring the permission to actually poison the `https://app.vulnerable.com` in real time and providing a PoC video for the same along with some further guidance to triage team, the state of the report was changed to -:
+
+![5](https://user-images.githubusercontent.com/58471667/222517116-a4726b8a-b38d-489f-895a-ba6206cc9b55.png)
 
 ## Supporting Material/Screenshots -:
 
