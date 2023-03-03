@@ -67,6 +67,8 @@ After acquiring the permission to actually poison the `https://app.vulnerable.co
 
 ![after](https://user-images.githubusercontent.com/58471667/222510741-04dd263e-4716-4942-8e42-dd76567ed47e.png)
 
+It's important to note here that it would have been extremely difficult to convince the program/triage team about the potential threat and impact, if the target would have been an application at production.
+
 ## References -:
 
 `https://portswigger.net/research/web-cache-entanglement`
