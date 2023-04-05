@@ -39,7 +39,7 @@ Conclusion here is that we poisoned the cache for any user with `Accept-Encoding
 
 But obviously this way of testing with "Accept-Encoding" didn't look appealing as far as targeting the real users was intended and this is the exact reason why this report was closed as `N/A` initially -:
 
-![4](https://user-images.githubusercontent.com/58471667/222517123-11a27dd4-6845-453a-807e-a658cb6e22b1.png)
+![E](https://user-images.githubusercontent.com/58471667/230042836-5e47f0a0-4758-498b-93d7-b5f9ca2cea5e.png)
 
 Now to workaround this, the only thing I was left with was to actually poison the `https://app.vulnerable.com` (which is a "staging" environment not production) using the steps in my next section.
 
