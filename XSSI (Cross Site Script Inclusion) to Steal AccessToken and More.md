@@ -10,7 +10,7 @@ I've found that the confidential data including the Access Token and UID is sent
 
 ## Proof of Concept to Steal AccessToken -:
 
-An attacker can define their own JSONP callback function (for ex `calc`) at the vulnerable endpoint -:
+An attacker can call their own JSONP callback function (for ex `calc`) at the vulnerable endpoint -:
 
 ![A](https://user-images.githubusercontent.com/58471667/230939082-c5d38896-2cf6-4b36-8712-8004cf56c646.png)
 
@@ -178,7 +178,7 @@ Cookie:
 {"attachments":[],"createDate":"2021-10-30T15:43:49.837Z","createdBy":"UID","messageText":"","sid":"","message":"ATTACKER_MESSAGE_FROM_VICTIM_ACCOUNT"}
 ```
 
-Now to send a message within an existing conversation from within the user's account, just replay the previous request with appropriate "conversationid". This conversationid you would have achieved from the response of the very initial message reading request.
+Now to send a message within an existing conversation from within the user's account, just replay the previous request with appropriate "conversationid". This `conversationid` you would have achieved from the response of the very initial message reading request.
 
 Similarly, apart from messaging related operations an attacker is also able to fetch all the `Lists`, create new `Lists` etc from the behalf of user's account.
 
