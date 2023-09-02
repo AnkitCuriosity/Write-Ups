@@ -7,3 +7,5 @@
 3) [Web Cache Poisoning - Capability to disable/deface the app.vulnerable.com (A tale of poisoning through the layers of caching)](https://github.com/AnkitCuriosity/Write-Ups/blob/main/Web%20Cache%20Poisoning%20-%20Capability%20to%20disable%E2%88%95deface%20the%20app.vulnerable.com%20(A%20tale%20of%20poisoning%20through%20the%20layers%20of%20caching).md)
 
 4) [XSSI (Cross Site Script Inclusion) to Steal AccessToken and More](https://github.com/AnkitCuriosity/Write-Ups/blob/main/XSSI%20(Cross%20Site%20Script%20Inclusion)%20to%20Steal%20AccessToken%20and%20More.md)
+
+5) [Account Takeover at https://trello.com](https://bugcrowd.com/disclosures/81d71c8d-952e-450c-82d9-f7ef8cfd7fe5/account-takeover-at-https-trello-com)
